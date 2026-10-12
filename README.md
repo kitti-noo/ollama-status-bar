@@ -38,7 +38,11 @@ npm test
 ```
 
 Open this folder in VS Code and press `F5` to launch an Extension Development Host.
-To build an installable VSIX, install `@vscode/vsce` and run `vsce package`.
+To build an installable VSIX, run:
+```sh
+npm run package
+```
+This uses `vsce` to package the extension into a `.vsix` file.
 
 Ollama's settings page is not a documented usage API. If its HTML structure
 changes, usage parsing may need to be updated.

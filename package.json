@@ -1,0 +1,56 @@
+{
+  "name": "ollama-status-bar",
+  "displayName": "Ollama Usage Status",
+  "description": "See your remaining Ollama Cloud usage in the VS Code status bar.",
+  "version": "0.1.0",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ollamaStatus.refresh",
+        "title": "Ollama Usage: Refresh"
+      },
+      {
+        "command": "ollamaStatus.setCookie",
+        "title": "Ollama Usage: Set Session Cookie"
+      },
+      {
+        "command": "ollamaStatus.clearCookie",
+        "title": "Ollama Usage: Clear Session Cookie"
+      }
+    ],
+    "configuration": {
+      "title": "Ollama Usage",
+      "properties": {
+        "ollamaStatus.refreshIntervalMinutes": {
+          "type": "number",
+          "default": 5,
+          "minimum": 0,
+          "description": "Minutes between automatic usage refreshes. Set to 0 to disable automatic refresh."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "npm run compile && node --test",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/vscode": "^1.90.0",
+    "@vscode/vsce": "^3.2.1",
+    "typescript": "^5.7.2"
+  }
+}

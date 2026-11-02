@@ -7,6 +7,10 @@ to refresh immediately.
 > Ollama's usage percentages are read from the signed-in account settings page.
 > The API-key usage endpoint may not include quota percentages.
 
+## Tech stack
+
+[![Ollama Usage Status tech stack](docs/diagrams/stack.png)](docs/diagrams/stack.png)
+
 ## Setup
 
 1. Sign in to [ollama.com](https://ollama.com) in your browser.

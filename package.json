@@ -2,6 +2,10 @@
   "name": "ollama-status-bar",
   "displayName": "Ollama Usage Status",
   "description": "See your remaining Ollama Cloud usage in the VS Code status bar.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kitti-noo/ollama-status-bar.git"
+  },
   "version": "0.1.0",
   "publisher": "local",
   "engines": {
